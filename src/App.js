@@ -1,19 +1,24 @@
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Header from './components/Header';
+import {  BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Homepage from './pages/Homepage';
+import TopicCard from './components/TopicCard';
+import About from "./pages/About"
 
 
 function App() {
   return (
-    <BrowserRouter>
+
+  <Router>
+    <Switch>
       <div className="App">
         <Route path="/" component={Homepage} exact />
-        {/* <Route path="/coins/:id" component={Coinpage} /> */}
+        <Route path="/topiccard" component={TopicCard} exact/>
+        <Route path="/about" component={About} exact/>
       </div>
 
-    </BrowserRouter>
+    </Switch>
+    </Router>
+
   );
 }
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom";
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './Navbar.css'
 const Navbar = () => {
@@ -7,11 +8,12 @@ const Navbar = () => {
         <div className="gpt3__navbar">
             <div className="gpt3__navbar-links">
                 <div className="gradient__text">
-                   <h2>AlgoMind</h2>
+                    <h2>AlgoMind</h2>
                 </div>
                 <div className="gpt3__navbar-links_container">
                     <p><a href="#home">Home</a></p>
-                    <p><a href="#wgpt3">About us</a></p>
+                    <p><Link to="/about">About us</Link></p>
+                    {/* <p><a href="/about">About us</a></p> */}
 
                 </div>
             </div>

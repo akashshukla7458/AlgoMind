@@ -11,9 +11,8 @@ const Navbar = () => {
                     <h2>AlgoMind</h2>
                 </div>
                 <div className="gpt3__navbar-links_container">
-                    <p><a href="#home">Home</a></p>
+                    <p><Link to="/">Home</Link></p>
                     <p><Link to="/about">About us</Link></p>
-                    {/* <p><a href="/about">About us</a></p> */}
 
                 </div>
             </div>
@@ -28,8 +27,11 @@ const Navbar = () => {
                 {toggleMenu && (
                     <div className="gpt3__navbar-menu_container scale-up-center">
                         <div className="gpt3__navbar-menu_container-links">
-                            <p><a href="#">Home</a></p>
-                            <p><a href="#">About us</a></p>
+                            {/* <p><a href="#">Home</a></p>
+                            <p><a href="#">About us</a></p> */}
+
+                            <p><Link to="/">Home</Link></p>
+                            <p><Link to="/about">About us</Link></p>
 
                         </div>
                         <div className="gpt3__navbar-menu_container-links-sign">

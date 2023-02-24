@@ -13,13 +13,13 @@
     align-items: center;
 }
 
-.gpt3__navbar-links_logo {
+.gpt3__navbar_logo {
     margin-right: 2rem;
-}
-
-.gpt3__navbar-links_logo img {
-    width: 62.56px;
-    height: 16.02px;
+    font-family: var(--font-family);
+    font-weight: bolder;
+    font-size: 24px;
+    line-height: 48px;
+    text-transform: capitalize;
 }
 
 .gpt3__navbar-links_container {

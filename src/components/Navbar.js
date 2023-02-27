@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './Navbar.css'
-import { Link } from 'react-router-dom';
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
     return (

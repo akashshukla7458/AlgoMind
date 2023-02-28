@@ -1,34 +1,34 @@
 import './App.css';
-
-import {  BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import TopicCard from './components/TopicCard';
 import About from "./pages/About"
-import Navbar from './components/Navbar';
-import Header from './components/Header';
-import Testimonials from './components/Testimonials';
-import Bottom from './components/Bottom';
-import Parallax from './components/Parallax'
 import Homepage from './pages/Homepage';
-
-
+import Questions from './components/Questions';
+import QuestionData from './services/QuestionData'
 
 function App() {
+  const topics = [...new Set(QuestionData.map((q) => q.topicName))];
+  
   return (
-
-  <Router>
-    <Switch>
+    <Router>
       <div className="App">
-        <Route path="/" component={Homepage} exact />
+        <Switch>
+          <Route path="/" component={Homepage} exact />
+          <Route path="/topiccard" component={TopicCard} exact />
+          <Route path="/about" component={About} exact />
+          
+          {topics.map((topic, index) => (
+            <Route key={index} path={`/${topic}`}>
+              <Questions topicName={topic} questions={QuestionData.filter((q) => q.topicName === topic)} />
+            </Route>
+          ))}
 
-        <Route path="/topiccard" component={TopicCard} exact/>
-        <Route path="/about" component={About} exact/>
-
-       
+          <Route path="*">
+            <h1>Page not found</h1>
+          </Route>
+        </Switch>
       </div>
-
-    </Switch>
     </Router>
-
   );
 }
 

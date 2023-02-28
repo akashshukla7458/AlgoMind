@@ -1,7 +1,8 @@
 import React from 'react'
 import './Topiccard.css'
+import { Link } from 'react-router-dom'
 import Navbar from './Navbar'
-import QuestionData from '../services.js/QuestionData'
+import QuestionData from '../services/QuestionData'
 
 
 
@@ -79,10 +80,10 @@ const TopicCard = () => {
           <div className="ag-courses_box">
             {questionsByTopic[topic].map((q, index) => (
               <div className={`ag-courses_item ${getBgClass(topic, index)}`} key={index}>
-                <a href={q.URL} className="ag-courses-item_link">
+                <Link to={q.topicName} className="ag-courses-item_link">
                   <div className="ag-courses-item_bg"></div>
                   <div className="ag-courses-item_title">{topic}</div>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

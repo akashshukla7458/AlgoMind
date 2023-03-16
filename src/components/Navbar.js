@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import { useHistory } from 'react-router-dom';
+
 import './Navbar.css'
+import Login from '../auth/Login';
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false);
+    const history= useHistory();
+
+   
+
+    const handleLogin = () => {
+        history.push('/Login')
+      }
     return (
         <div className="gpt3__navbar">
             <div className="gpt3__navbar-links">
@@ -18,8 +28,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="gpt3__navbar-sign">
-                <p>Sign in</p>
-                <button type="button">Sign up</button>
+                <button className='Login' type='button' onClick={handleLogin}>Login</button>
             </div>
             <div className="gpt3__navbar-menu">
                 {toggleMenu

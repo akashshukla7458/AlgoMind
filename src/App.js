@@ -5,6 +5,7 @@ import About from "./pages/About"
 import Homepage from './pages/Homepage';
 import Questions from './components/Questions';
 import QuestionData from './services/QuestionData'
+import Login from './auth/Login';
 
 function App() {
   const topics = [...new Set(QuestionData.map((q) => q.topicName))];
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" component={Homepage} exact />
           <Route path="/topiccard" component={TopicCard} exact />
           <Route path="/about" component={About} exact />
+          <Route path="/login" component={Login} exact />
           
           {topics.map((topic, index) => (
             <Route key={index} path={`/${topic}`}>

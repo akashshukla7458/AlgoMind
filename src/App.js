@@ -6,6 +6,8 @@ import Homepage from './pages/Homepage';
 import Questions from './components/Questions';
 import QuestionData from './services/QuestionData'
 import Login from './auth/Login';
+import  Alert  from './components/Alert';
+import Userpage from './auth/Userpage';
 
 function App() {
   const topics = [...new Set(QuestionData.map((q) => q.topicName))];
@@ -18,6 +20,7 @@ function App() {
           <Route path="/topiccard" component={TopicCard} exact />
           <Route path="/about" component={About} exact />
           <Route path="/login" component={Login} exact />
+          <Route path="/Userpage" component={Userpage} exact />
           
           {topics.map((topic, index) => (
             <Route key={index} path={`/${topic}`}>
@@ -29,6 +32,7 @@ function App() {
             <h1>Page not found</h1>
           </Route>
         </Switch>
+        <Alert/>
       </div>
     </Router>
   );

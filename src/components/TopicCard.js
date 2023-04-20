@@ -39,11 +39,9 @@ const TopicCard = () => {
     <div className="ag-courses_item">
       <a href="#" className="ag-courses-item_link">
         <div className="ag-courses-item_bg"></div>
-
         <div className="ag-courses-item_title">
           UI/Web&amp;Graph design for teenagers 11-17&#160;years old
         </div>
-
         <div className="ag-courses-item_date-box">
           Start:
           <span className="ag-courses-item_date">
@@ -52,13 +50,11 @@ const TopicCard = () => {
         </div>
       </a>
     </div>
-
   */
       }
 
       {/* {topics.map((topic) => (
         <div key={topic}>
-
           <div className="ag-courses_box">
             {questionsByTopic[topic].map((q, index) => (
               <div className="ag-courses_item" key={index}>
@@ -74,7 +70,7 @@ const TopicCard = () => {
 
 
 
-
+      <div className="content_grid">
       {topics.map((topic) => (
         <div key={topic}>
           <div className="ag-courses_box">
@@ -91,7 +87,7 @@ const TopicCard = () => {
       ))}
 
 
-      
+  </div> 
     </div>
   )
 }

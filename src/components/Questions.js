@@ -11,17 +11,17 @@ const QuestionsTable = ({ topicName }) => {
   }, [topicName]);
   
   return (
-    <div>
+    <div className='Table_content'>
     <table>
       <thead>
         <tr>
           <th>Sno</th>
           <th>Problem</th>
-          <th>Done</th>
           <th>Bookmark</th>
           <th>Notes</th>
-          <th>URL</th>
-          <th>URL2</th>
+          <th>URL 1</th>
+          <th>URL 2</th>
+          <th>Mark As Done</th>
         </tr>
       </thead>
       <tbody>
@@ -31,11 +31,11 @@ const QuestionsTable = ({ topicName }) => {
         {/* <td>{index + 1}</td> */}
         <td>{index * q.questions.length + qIndex + 1}</td>
         <td>{question.Problem}</td>
-        <td>{question.Done !== undefined ? question.Done.toString() : ""}</td>
         <td>{question.Bookmark !== undefined ? question.Bookmark.toString() : ""}</td>
         <td>{question.Notes !== undefined ? question.Notes : ""}</td>
-        <td><a href={question.URL}>{question.URL !== undefined ? question.URL : ""}</a></td>
-        <td><a href={question.URL2}>{question.URL2 !== undefined ? question.URL2 : ""}</a></td>
+        <td><a href={question.URL} target="_blank" rel="noreferrer" className='QLinks'>{question.URL !== undefined ? "Link 1" : ""}</a></td>
+        <td><a href={question.URL2} target="_blank" rel="noreferrer" className='QLinks'>{question.URL2 !== undefined ? "Link 2" : ""}</a></td>
+        <td><input type="checkbox" ></input></td>        
       </tr>
     ))
   ))}

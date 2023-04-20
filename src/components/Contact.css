@@ -1,0 +1,104 @@
+.Contactsection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Contactsection h1{
+    max-width: 75%;
+    font-family: var(--font-family);
+    font-weight: 800;
+    font-size: 62px;
+    line-height: 75px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+.about {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.contentbx {
+    padding: 2rem;
+    width: 50%;
+}
+
+.imgbx2 {
+    background: url(../assests/bg2.png);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 20px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
+.form{
+    width: 100%;
+}
+
+.form .inputbx {
+    margin-bottom: 4rem;
+}
+
+.form .inputbx input {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 10px 0px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.form .inputbx input::placeholder {
+    color: #fff;
+}
+
+.form .inputbx textarea {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--color-text);
+    margin-top: 1.5rem;;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    min-height: 150px;
+}
+
+.form .inputbx textarea::placeholder {
+    color: #fff;
+}
+.form .inputbx input[type="submit"] {
+   width: 150px;
+    position: relative;
+    background-color: #FF4820;
+    border-radius: 1em;
+    font-size: 16px;
+    color: white;
+    padding: 0.8em 1.8em;
+    cursor:pointer;
+    user-select:none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s; 
+}

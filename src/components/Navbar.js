@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="gpt3__navbar">
             <div className="gpt3__navbar-links">
                 <div className="gradient__text">
-                    <h2>AlgoMind</h2>
+                    <h2 className='gpt3__navbar_logo'><Link to = '/'> AlgoMind</Link></h2>
                 </div>
                 <div className="gpt3__navbar-links_container">
 

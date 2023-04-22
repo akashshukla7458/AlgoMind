@@ -2,11 +2,32 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 import ai from '../assests/ai.png'
 import './header.css'
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 const Header = () => {
   const history= useHistory();
-  const handleClick = () => {
-    history.push('/topiccard')
-  }
+  const isLoggedIn = async () => {
+    return new Promise((resolve, reject) => {
+      const auth = getAuth();
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          resolve(true)
+          const uid = user.uid;
+          
+        } else {
+          resolve(false);
+        }
+      });
+    });
+  };
+  
+  const handleClick = async () => {
+    const userIsLoggedIn = await isLoggedIn();
+    if (userIsLoggedIn) {
+      history.push('/topiccard');
+    } else {
+      history.push('/login');
+    }
+  };
   return (
     <div className="gpt3__header section__padding" id="home">
       <div className="gpt3__header-content">

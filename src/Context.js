@@ -5,7 +5,6 @@ import { auth } from './firebase';
 const Algo = createContext();
 const Context = ({ children }) => {
 
-
   const [user, setUser] = useState(null);
   const [alert, setAlert] = useState({
     open: false,

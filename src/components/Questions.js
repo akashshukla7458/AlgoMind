@@ -33,8 +33,8 @@ const QuestionsTable = ({ topicName }) => {
         <td>{question.Problem}</td>
         <td>{question.Bookmark !== undefined ? question.Bookmark.toString() : ""}</td>
         <td>{question.Notes !== undefined ? question.Notes : ""}</td>
-        <td><a href={question.URL} target="_blank" rel="noreferrer" className='QLinks'>{question.URL !== undefined ? "Link 1" : ""}</a></td>
-        <td><a href={question.URL2} target="_blank" rel="noreferrer" className='QLinks'>{question.URL2 !== undefined ? "Link 2" : ""}</a></td>
+        <td className='Linktable'><a href={question.URL} target="_blank" rel="noreferrer" className='QLinks'>{question.URL !== undefined ? "Link 1" : ""}</a></td>
+        <td className='Linktable'><a href={question.URL2} target="_blank" rel="noreferrer" className='QLinks'>{question.URL2 !== undefined ? "Link 2" : ""}</a></td>
         <td><input type="checkbox" ></input></td>        
       </tr>
     ))

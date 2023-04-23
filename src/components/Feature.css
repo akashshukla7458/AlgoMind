@@ -20,10 +20,12 @@
 .features p{
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.4rem;
     line-height: 28px;
     color: var(--color-text);
     margin-top: 1.5rem;
+    max-width: 75%;
+    text-align: center;
 }
 
 #features-main-heading{
@@ -45,6 +47,10 @@
 
 .each-feature{
     max-width: 29%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .each-feature img{
     width: 100%;
@@ -75,7 +81,7 @@
     margin-bottom: 0.25rem;
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.5rem;
     line-height: 40px;
     letter-spacing: 0.02em;
     color: #ff8a71;
@@ -83,9 +89,28 @@
 .each-feature p{
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1 rem;
     line-height: 28px;
     color: var(--color-text);
     margin-top: 1.5rem;
     text-align: center;
+}
+
+@media screen and (max-width: 1050px){
+    .each-feature{
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .features p{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 24px;
+        color: var(--color-text);
+        margin-top: 1.5rem;
+        max-width: 75%;
+        text-align: center;
+    }
 }

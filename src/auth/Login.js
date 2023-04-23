@@ -93,7 +93,7 @@ const Login = ({ handleClose }) => {
             <SignUpForm />
 
             <div className="login">
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} method="POST">
                 <label htmlFor="chk" aria-hidden="true">
                   Login
                 </label>

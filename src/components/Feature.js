@@ -24,7 +24,7 @@ const Feature = () => {
                 <div className="each-feature">
                     <img src={image3} alt=" 3" className='img3'/>
                     <h2>Easy Checklist</h2>
-                    <p>Keep track of your progress and stay organized with our simple and intuitive checklist feature, which helps you manage your study plan and achieve your goals.</p>
+                    <p>Keep track of progress and stay organized with simple and intuitive checklist feature, which helps you manage study plan and achieve goals.</p>
                 </div>
             </div>
         </div>

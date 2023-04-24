@@ -1,12 +1,14 @@
 .footer_section{
     display: flex;
     justify-content: space-around;
+    gap: 2px;
 }
 .leftside{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2rem;
 }
 .navbar_logo {
     font-family: var(--font-family);
@@ -40,7 +42,7 @@
     font-weight: bold;
     font-size: 16px;
     line-height: 30px;
-    color: var(--color-text);
+    /* color: var(--color-text); */
     margin-bottom: 2rem;
 }
 @media screen and (max-width:950px){

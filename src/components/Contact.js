@@ -48,9 +48,9 @@ const Contact = () => {
   };
 
   return (
-    <section className="Contactsection section__padding">
-      <h1 className='gradient__text'>Contact Us</h1>
-      <div className="about">
+<section className="Contactsection section__padding" >
+    <h1 className='gradient__text'>Contact Us</h1>
+    <div className="about">
         <div className="contentbx">
           <div className="form">
             <form onSubmit={handleSubmit}>

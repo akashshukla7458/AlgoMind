@@ -27,7 +27,7 @@ const Userpage = () => {
       <Navbar />
       <div className="sidebar">
       <Avatar
-        className="avatar__user"
+        className="avatar__userr"
         src={user.photoURL}
         alt={user.displayName || user.email}
       />

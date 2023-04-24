@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useHistory } from 'react-router-dom';
-
+import GoogleButton from 'react-google-button';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { AlgoState } from '../Context';
 
 const SignUpForm = ({ handleClose }) => {
@@ -51,6 +52,32 @@ const SignUpForm = ({ handleClose }) => {
     }
   }
 
+  const googleProvider = new GoogleAuthProvider();
+
+
+  const signInWithGoogle = () => {
+    signInWithPopup(auth, googleProvider)
+      .then((res) => {
+        setAlert({
+          open: true,
+          message: `Sign Up Successful , Welcome ${res.user.email}`,
+          type: 'success',
+        });
+        // handleClose();
+        history.push('/');
+      })
+
+      .catch((error) => {
+        setAlert({
+          open: true,
+          message: error.message,
+          type: 'error',
+        });
+        return;
+      });
+  };
+
+
 
 
   return (
@@ -68,7 +95,10 @@ const SignUpForm = ({ handleClose }) => {
         <input className="inp" type="password" name="pswd" placeholder="Confirm Password" value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)} required />
         <button className="btn-btn" onClick={handleSubmit}>Sign up</button>
-
+        <GoogleButton
+                  style={{ width: '70%', height: '50px', outline: 'none', margin: '10px auto' }}
+                  onClick={signInWithGoogle}
+                />
       </form>
     </div>
   );

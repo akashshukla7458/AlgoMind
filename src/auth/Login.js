@@ -63,7 +63,7 @@ const Login = ({ handleClose }) => {
       .then((res) => {
         setAlert({
           open: true,
-          message: `Sign Up Successful , Welcome ${res.user.email}`,
+          message: `Login Successful , Welcome ${res.user.email}`,
           type: 'success',
         });
         // handleClose();

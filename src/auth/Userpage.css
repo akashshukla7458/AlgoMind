@@ -7,7 +7,7 @@
   border-right: 2px solid white;
 }
 
-.avatar__user {
+.avatar__userr {
   height: 150px;
   width: 150px;
   margin: 20px;
@@ -20,7 +20,7 @@ h2 {
 .logout {
   margin-top: 20px;
   padding: 0.5rem 1rem;
-  color: #fff;
+  color: #fbf9f9;
   background: #FF4820;
   font-family: var(--font-family);
   font-weight: 500;

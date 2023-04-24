@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { useHistory } from 'react-router-dom';
 import { Avatar } from '@material-ui/core';
-
-
 import './Navbar.css'
-import Login from '../auth/Login';
-import Userpage from '../auth/Userpage';
 import AuthModal from '../auth/AuthModal';
 import { AlgoState } from '../Context';
 

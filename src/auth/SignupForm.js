@@ -2,17 +2,22 @@ import React from 'react';
 import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
+import { useHistory } from 'react-router-dom';
+
 import { AlgoState } from '../Context';
 
 const SignUpForm = ({ handleClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const history = useHistory();
+
 
   const { setAlert } = AlgoState()
 
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
+    e.preventDefault(); 
     if (password !== confirmPassword) {
       setAlert({
         open: true,
@@ -32,7 +37,8 @@ const SignUpForm = ({ handleClose }) => {
         type: "success"
 
       })
-      handleClose()
+      // handleClose()
+      history.push('/login');
 
     }
     catch (error) {
@@ -49,7 +55,7 @@ const SignUpForm = ({ handleClose }) => {
 
   return (
     <div className="signup">
-      <form>
+      <form method="POST">
         <label htmlFor="chk" aria-hidden="true">
           Sign up
         </label>
